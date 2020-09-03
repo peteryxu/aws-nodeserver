@@ -1,0 +1,22 @@
+{
+  "name": "aws-nodeserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peteryxu/aws-nodeserver.git"
+  },
+  "author": "Peter Xu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/peteryxu/aws-nodeserver/issues"
+  },
+  "homepage": "https://github.com/peteryxu/aws-nodeserver#readme",
+  "devDependencies": {
+    "express": "^4.17.1"
+  }
+}
