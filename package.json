@@ -4,10 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
+    "test": "mocha test/index.test.js --exit",
+    "system-test": "NAME=Cloud test/runner.sh mocha test/system.test.js --timeout=30000",
+    "lint": "eslint '**/*.js'",
+    "fix": "eslint --fix '**/*.js'",
     "restart": "pm2 startOrRestart ecosystem.config.js",
     "deploy-aws-vm": "pm2 deploy ecosystem.config.js production",
-    "local": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "gcloud-build": "gcloud builds submit --tag gcr.io/exalted-skein-274700/aws-nodeserver",
+    "gcloud-run": "gcloud run deploy --image gcr.io/exalted-skein-274700/aws-nodeserver --platform managed"
   },
   "repository": {
     "type": "git",
@@ -19,8 +24,14 @@
     "url": "https://github.com/peteryxu/aws-nodeserver/issues"
   },
   "homepage": "https://github.com/peteryxu/aws-nodeserver#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
   "devDependencies": {
     "express": "^4.17.1",
-    "pm2": "^4.4.1"
+    "pm2": "^4.4.1",
+    "got": "^11.0.0",
+    "mocha": "^8.0.0",
+    "supertest": "^4.0.2"
   }
 }
