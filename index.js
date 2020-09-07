@@ -4,7 +4,7 @@ var app = express();
 app.use(express.static('public'))
 
 app.get('/hello', function (req, res) {
-  res.send('hello msg from 09/06');
+  res.send('hello msg from 09/07');
 });
 
 app.get('/bands', function (req, res) {
