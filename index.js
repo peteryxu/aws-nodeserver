@@ -4,7 +4,7 @@ var app = express();
 app.use(express.static('public'))
 
 app.get('/hello', function (req, res) {
-  res.send('hello msg from 09/07');
+  res.send('Hello World API: Modified on 09/18');
 });
 
 app.get('/bands', function (req, res) {
